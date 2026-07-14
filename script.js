@@ -26,8 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (location.pathname.endsWith('/chapter-study.html')) {
     document.title = 'Reading Guide | Nervous Conditions Study Guide';
-    const heading = document.querySelector('#chapters-title');
-    if (heading) heading.textContent = 'Reading Guide';
+    const hero = document.querySelector('.page-hero .section-inner');
+    if (hero) {
+      hero.replaceChildren();
+
+      const eyebrow = document.createElement('p');
+      eyebrow.className = 'eyebrow';
+      eyebrow.textContent = 'Chapter by Chapter';
+
+      const heading = document.createElement('h1');
+      heading.id = 'chapters-title';
+      heading.textContent = 'Reading Guide';
+
+      const note = document.createElement('p');
+      note.className = 'page-hero-note';
+      note.textContent = 'Each book summary includes the action, major themes, important characters, study questions, and why that section matters.';
+
+      hero.append(eyebrow, heading, note);
+    }
   }
 
   document.querySelectorAll('a[href="chapter-study.html"] span').forEach((span) => {
