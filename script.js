@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navOrder = [
     ['index.html', 'Home'],
-    ['author.html', 'Author'],
+    ['author.html', 'About the Author'],
     ['setting.html', 'Setting'],
     ['themes.html', 'Themes'],
     ['characters.html', 'Characters'],
